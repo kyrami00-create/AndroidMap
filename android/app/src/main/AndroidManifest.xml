@@ -1,8 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Разрешение на интернет для карт -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    
     <application
         android:label="flutter_androidmap1"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        
+        <!-- API ключ для Яндекс.Карт (можно оставить пустым) -->
+        <meta-data
+            android:name="com.yandex.maps.api.key"
+            android:value="YOUR_API_KEY" />
+        
         <activity
             android:name=".MainActivity"
             android:exported="true"
