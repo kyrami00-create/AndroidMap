@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
+import 'food_selection_screen.dart';
+import 'food_zones_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,7 +42,8 @@ class MyApp extends StatelessWidget {
  }
 
 
- class CampusNavigationScreen extends StatefulWidget { //Главный экран и виджет меняющий состояние StatefulWidget
+ class CampusNavigationScreen extends StatefulWidget {
+   //Главный экран и виджет меняющий состояние StatefulWidget
    const CampusNavigationScreen({super.key}); //может быть пригодится, что бы не путать виджеты
 
    @override //Замена версии родака
@@ -65,8 +68,8 @@ class MyApp extends StatelessWidget {
 
     final List<Widget> _screens = [  
      NavigationMapScreen(),  
-     const EmptyScreen(),    
-     const EmptyScreen(),
+     const FoodSelectionScreen(),  
+     const FoodZonesScreen(),
      const EmptyScreen(),
      const EmptyScreen(),
      const EmptyScreen(),
@@ -258,7 +261,7 @@ class _NavigationMapScreenState extends State<NavigationMapScreen> {
                 // В стиле твоего приложения: темно-синий + фиолетовый акцент
                 0.35, 0.25, 0.50, 0, 8,   // R — фиолетовый оттенок
                 0.25, 0.30, 0.45, 0, 8,   // G — приглушенный
-                0.50, 0.35, 0.70, 0, 12,  // B — синий акцент
+                0.50, 0.35, 0.70, 0, 12,  // B - синий акцент
                 0,    0,    0,    1, 0,   // A
               ]),
               child: widget,
